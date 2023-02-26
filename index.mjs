@@ -21,7 +21,7 @@ app.post('/chat', async (req, res) => {
     switch (intentName) {
         case 'OrderPizza':
 
-            let responseText = `Your${params.qty} ${params.size} ${params.flavor} ${params.item}Ready`
+            let responseText = `${params.qty} ${params.size} ${params.flavor} ${params.item} Ready for You`
             console.log(params);
             return res.send({
                 "fulfillmentMessages": [
